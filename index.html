@@ -604,6 +604,18 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   .hero h1 .line span{transform:none}
 }
 </style>
+<script>
+/* Abrir siempre desde arriba */
+try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch(e){}
+(function(){
+  var top = function(){ window.scrollTo(0,0); };
+  if (location.hash) { try { history.replaceState(null, '', location.pathname + location.search); } catch(e){} }
+  top();
+  window.addEventListener('DOMContentLoaded', top);
+  window.addEventListener('load', function(){ top(); setTimeout(top, 60); });
+  window.addEventListener('pageshow', function(e){ if (e.persisted) top(); });
+})();
+</script>
 </head>
 <body>
 
