@@ -519,6 +519,19 @@ main .btn-dark::after{background:linear-gradient(100deg,transparent,rgba(241,220
 .ig-ico .dot{fill:currentColor;stroke:none}
 .socials a.ig{color:#fff}
 .stat:nth-child(2) .platform{--c:#E1306C}.stat:nth-child(2) .platform .ig-ico{color:#E1306C}
+
+/* ---------- Mobile buttons ---------- */
+@media (max-width:640px){
+  .hero-cta{flex-direction:column;align-items:stretch;gap:12px}
+  .hero-cta .btn,main .hero-cta .btn{width:100%;flex:none;justify-content:center;white-space:normal;text-align:center;padding:18px 22px}
+  .magnetic{transform:none!important}
+  .gal-head .btn,.watch-grid .btn{width:100%;justify-content:center}
+  .story-body p{margin-top:18px}
+  .stats,.story.light,.path,.watch,.book,.planner,.value,.biz,.brands{padding:56px 0!important}
+  .gallery{padding-top:56px!important}.cta{padding:72px 0 48px!important}
+  .stats-head,.value-head,.biz-head,.gal-head,.path-head{margin-bottom:28px!important}
+  .sp-band{height:min(72vh,560px)}
+}
 /* ---------- Footer ---------- */
 footer{border-top:1px solid var(--line2);padding:34px 0 40px}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:var(--dim);font-size:13px}
@@ -696,7 +709,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
           <div class="eyebrow reveal">Audiencia</div>
           <h2 class="h2 reveal r1" style="margin-top:20px">Una comunidad<br>que <em>escucha</em>.</h2>
         </div>
-        <p class="reveal r2">Desde 2021 construyo una audiencia en español interesada en crecer: hábitos, liderazgo, mentalidad y proyectos propios. Personas que no solo consumen, sino que aplican.</p>
+        <p class="reveal r2">Una audiencia en español que no solo escucha: aplica.</p>
       </div>
 
       <div class="stat-grid reveal r2">
@@ -738,9 +751,8 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       </div>
       <div class="story-body">
         <p class="lead reveal">Ayudo a personas y empresas a <em>comunicar mejor</em>, <em>liderar con claridad</em> y generar <em>crecimiento real</em>.</p>
-        <p class="reveal r1">Mi experiencia no viene de la teoría. Durante <span class="hl">casi 8 años</span> lideré una red de <span class="hl">más de 50.000 personas</span>, formando equipos, desarrollando líderes y dando conferencias en <span class="hl">más de 10 países</span>.</p>
-        <p class="reveal r2">Antes de eso, me formé en entornos de alta exigencia como el <strong>Ejército Argentino</strong> y la <strong>Fuerza Aérea</strong>, donde desarrollé disciplina, toma de decisiones y trabajo bajo presión.</p>
-        <p class="reveal r3">Hoy combino esa experiencia con la creación de contenido —<strong>podcast y YouTube</strong>— y el desarrollo de proyectos propios, ayudando a otros a transformar su realidad desde cero.</p>
+        <p class="reveal r1">Durante <span class="hl">casi 8 años</span> lideré una red de <span class="hl">más de 50.000 personas</span> y di conferencias en <span class="hl">más de 10 países</span>.</p>
+        <p class="reveal r2">Me formé en el <strong>Ejército Argentino</strong> y la <strong>Fuerza Aérea</strong>. Hoy lo combino con contenido y proyectos propios.</p>
         <div class="mini-stats">
           <div class="mini reveal r1"><b><span class="count" data-to="8">0</span></b><span>años liderando equipos</span></div>
           <div class="mini reveal r2"><b>+<span class="count" data-to="50" data-suffix="K">0</span></b><span>personas en la red</span></div>
@@ -780,25 +792,25 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
           <div class="node">I</div>
           <div class="when">Formación</div>
           <h3>Ejército Argentino y Fuerza Aérea</h3>
-          <p>Disciplina, toma de decisiones y trabajo bajo presión en entornos de alta exigencia.</p>
+          <p>Disciplina y decisiones bajo presión.</p>
         </div>
         <div class="step reveal r1">
           <div class="node">II</div>
           <div class="when">Casi 8 años</div>
           <h3>Una red de +50.000 personas</h3>
-          <p>Formación de equipos, desarrollo de líderes y crecimiento sostenido de una organización a gran escala.</p>
+          <p>Equipos, líderes y crecimiento a gran escala.</p>
         </div>
         <div class="step reveal r2">
           <div class="node">III</div>
           <div class="when">Internacional</div>
           <h3>Conferencias en +10 países</h3>
-          <p>Hitos: 3.000 personas en el Centro de Convenciones de Cancún (México) y 4.000 en el de Campinas (São Paulo, Brasil).</p>
+          <p>Hasta 4.000 personas en un mismo auditorio.</p>
         </div>
         <div class="step reveal r3">
           <div class="node">IV</div>
           <div class="when">2021 — hoy</div>
           <h3>Podcast, YouTube y proyectos propios</h3>
-          <p>Contenido de desarrollo personal en español con más de 1M de visualizaciones, conferencias y soluciones para empresas.</p>
+          <p>Más de 1M de visualizaciones y soluciones para empresas.</p>
         </div>
       </div>
     </div>
@@ -810,7 +822,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       <div>
         <div class="eyebrow reveal">Contenido</div>
         <h2 class="h2 reveal r1" style="margin-top:20px">Bienvenidos<br>a mi <em>canal</em>.</h2>
-        <p class="reveal r2">Así comunico: directo, cercano y con ideas que se pueden aplicar desde hoy. Dale play y conocé el tono de mi contenido.</p>
+        <p class="reveal r2">Directo, cercano y aplicable. Dale play.</p>
         <a href="https://www.youtube.com/@Caminoalexitosantiagocian" target="_blank" rel="noopener" class="btn btn-ghost magnetic reveal r3">Ver el canal de YouTube <span class="arr">→</span></a>
       </div>
       <div class="player reveal r2" id="player">
@@ -831,9 +843,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         <div class="eyebrow reveal">Escritor</div>
         <h2 class="h2 reveal r1" style="margin-top:20px">Quiero <em>Plata</em>.</h2>
         <p class="lead reveal r2">Una guía sencilla para tomar el control de tu vida económica, <em>sin fórmulas mágicas</em>.</p>
-        <p class="reveal r3">Con lenguaje claro y ejemplos prácticos, el libro recorre lo que no te enseñaron en la escuela: crear hábitos financieros, entender la importancia de invertir y dar el paso de empleado a emprendedor.</p>
-        <p class="reveal r3">Presentado en la <strong style="color:var(--ink)">Feria Internacional del Libro de Buenos Aires</strong>, la más grande del mundo de habla hispana.</p>
-        <p class="reveal r3">No promete atajos. Ofrece herramientas para cambiar la mentalidad y construir una vida más estable y exitosa.</p>
+        <p class="reveal r3">Hábitos, mentalidad y el paso de empleado a emprendedor, con lenguaje claro. Presentado en la <strong style="color:var(--ink)">Feria Internacional del Libro de Buenos Aires</strong>.</p>
         <div class="book-tags reveal r4"><span>Hábitos</span><span>Mentalidad</span><span>De empleado a emprendedor</span><span>Autor: Santiago Matías Cian</span></div>
       </div>
     </div>
@@ -846,7 +856,6 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         <div class="eyebrow reveal">Ebook · Desarrollo personal</div>
         <h2 class="h2 reveal r1" style="margin-top:20px">Planificador<br>de <em>Metas</em>.</h2>
         <p class="lead reveal r2">Convertí tus ideas en resultados <em>en 12 semanas</em>.</p>
-        <p class="reveal r2">Un método simple para enfocarte en un solo objetivo, planificar tu semana y sostener la motivación hasta alcanzarlo.</p>
         <ul class="pl-list reveal r3">
           <li>Una meta a la vez, con foco total</li>
           <li>Planificación semanal paso a paso</li>
@@ -890,35 +899,35 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
           <div class="eyebrow reveal">Qué puedo aportar</div>
           <h2 class="h2 reveal r1" style="margin-top:20px">Donde sumo<br><em>valor</em> hoy.</h2>
         </div>
-        <p class="reveal r2">Cuatro áreas en las que combino experiencia de campo con una voz propia. Para marcas, empresas y equipos que quieren resultados, no discursos.</p>
+        <p class="reveal r2">Experiencia de campo con voz propia.</p>
       </div>
       <div class="cards">
         <article class="card reveal">
           <div class="card-in">
             <div class="idx"><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H8l-4 4V5Z" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke-linecap="round"/></svg></span><span>01</span></div>
             <h3>Oratoria y comunicación efectiva</h3>
-            <p>Hablar en público con claridad y seguridad. Mensajes que se entienden, se recuerdan y mueven a la acción, frente a un equipo o un auditorio en otro país.</p>
+            <p>Hablar en público con claridad y seguridad.</p>
           </div>
         </article>
         <article class="card reveal r1">
           <div class="card-in">
             <div class="idx"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><circle cx="5" cy="16" r="2.5"/><circle cx="19" cy="16" r="2.5"/><path d="M12 10v3m0 0-5 1.5M12 13l5 1.5" stroke-linecap="round"/></svg></span><span>02</span></div>
             <h3>Liderazgo y desarrollo de equipos</h3>
-            <p>Formar líderes, ordenar estructuras y sostener la motivación. Lo aprendí liderando una red de más de 50.000 personas.</p>
+            <p>Formar líderes y sostener la motivación.</p>
           </div>
         </article>
         <article class="card reveal">
           <div class="card-in">
             <div class="idx"><span class="icon"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3" stroke-linecap="round"/></svg></span><span>03</span></div>
             <h3>Creación de contenido con impacto</h3>
-            <p>Podcast, YouTube e Instagram con una audiencia real en español. Contenido que construye confianza y no solo alcance.</p>
+            <p>Una audiencia real en español que confía.</p>
           </div>
         </article>
         <article class="card reveal r1">
           <div class="card-in">
             <div class="idx"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8" fill="#d4b36a"/></svg></span><span>04</span></div>
             <h3>Orden y enfoque en proyectos en crecimiento</h3>
-            <p>Prioridades claras, procesos simples y foco en lo que mueve la aguja cuando el proyecto empieza a escalar.</p>
+            <p>Prioridades claras y foco para escalar.</p>
           </div>
         </article>
       </div>
@@ -933,13 +942,13 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
           <div class="eyebrow reveal">Soluciones empresariales</div>
           <h2 class="h2 reveal r1" style="margin-top:20px">Equipos que comunican mejor, <em>rinden mejor</em>.</h2>
         </div>
-        <p class="reveal r2">Llevo a las empresas lo que aprendí liderando a más de 50.000 personas: oratoria, liderazgo y orden para crecer. Formatos a medida para cada equipo.</p>
+        <p class="reveal r2">Oratoria, liderazgo y orden, a medida de cada equipo.</p>
       </div>
       <div class="biz-list">
-        <div class="biz-item reveal"><span class="n">I</span><div><h3>Conferencias y keynotes</h3><p>Charlas de oratoria, liderazgo y desarrollo personal para eventos, convenciones y cierres de año.</p></div></div>
-        <div class="biz-item reveal r1"><span class="n">II</span><div><h3>Talleres de oratoria</h3><p>Entrenamiento práctico para hablar en público, presentar ideas y comunicar con seguridad.</p></div></div>
-        <div class="biz-item reveal r2"><span class="n">III</span><div><h3>Desarrollo de líderes</h3><p>Formación de mandos y equipos: cómo liderar con claridad, delegar y sostener la motivación.</p></div></div>
-        <div class="biz-item reveal r3"><span class="n">IV</span><div><h3>Orden y enfoque para crecer</h3><p>Acompañamiento a proyectos en crecimiento para definir prioridades, procesos simples y foco.</p></div></div>
+        <div class="biz-item reveal"><span class="n">I</span><div><h3>Conferencias y keynotes</h3><p>Para eventos, convenciones y cierres de año.</p></div></div>
+        <div class="biz-item reveal r1"><span class="n">II</span><div><h3>Talleres de oratoria</h3><p>Hablar en público y presentar con seguridad.</p></div></div>
+        <div class="biz-item reveal r2"><span class="n">III</span><div><h3>Desarrollo de líderes</h3><p>Liderar con claridad y delegar mejor.</p></div></div>
+        <div class="biz-item reveal r3"><span class="n">IV</span><div><h3>Orden y enfoque para crecer</h3><p>Prioridades, procesos simples y foco.</p></div></div>
       </div>
       <div class="reveal r2" style="margin-top:44px"><a href="#contacto" class="btn btn-dark magnetic">Llevarlo a mi empresa <span class="arr">→</span></a></div>
     </div>
@@ -952,9 +961,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         <div class="eyebrow">Para marcas</div>
         <h2 class="h2">Tu marca, contada por alguien que la <em>gente escucha</em>.</h2>
         <div class="brand-grid">
-          <div class="why reveal r1"><div class="k">01 · Audiencia</div><h4>Comunidad en español que busca crecer</h4><p>20K en Spotify, 39K en Instagram y más de 1M de visualizaciones. Personas con intención de mejorar su vida y sus proyectos.</p></div>
-          <div class="why reveal r2"><div class="k">02 · Credibilidad</div><h4>Una voz respaldada por experiencia</h4><p>Liderazgo de una red de +50.000 personas, conferencias para hasta 4.000 personas en +10 países y formación militar. Lo que recomiendo, se escucha.</p></div>
-          <div class="why reveal r3"><div class="k">03 · Constancia</div><h4>Contenido activo desde 2021</h4><p>Publicación sostenida en podcast y YouTube, con canal monetizado, más de 5.000 horas de reproducción y una relación de confianza construida en el tiempo.</p></div>
+          <div class="why reveal r1"><div class="k">01 · Audiencia</div><h4>Comunidad en español que busca crecer</h4><p>20K en Spotify, 39K en Instagram y +1M de visualizaciones.</p></div>
+          <div class="why reveal r2"><div class="k">02 · Credibilidad</div><h4>Una voz respaldada por experiencia</h4><p>+50.000 personas lideradas y auditorios de hasta 4.000.</p></div>
+          <div class="why reveal r3"><div class="k">03 · Constancia</div><h4>Contenido activo desde 2021</h4><p>Canal monetizado y +5.000 horas de reproducción.</p></div>
         </div>
         <div class="formats reveal r2">
           <span>Integraciones en el podcast</span><span>Contenido en YouTube</span><span>Colaboraciones en Instagram</span><span>Conferencias y charlas</span><span>Talleres de oratoria</span><span>Capacitaciones para empresas</span><span>Proyectos a medida</span>
@@ -970,7 +979,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       <div>
         <div class="eyebrow reveal">Hablemos</div>
         <h2 class="h2 reveal r1">Si buscás a alguien que no solo hable, sino que <em>haya hecho</em>, podemos hablar.</h2>
-        <p class="reveal r2">Colaboraciones con marcas, conferencias, talleres o proyectos. Contame qué tenés en mente.</p>
+        <p class="reveal r2">Marcas, conferencias o talleres. Contame tu idea.</p>
         <div class="hero-cta reveal r3">
           <a href="mailto:ciansantiagomatias@gmail.com?subject=Propuesta%20de%20colaboraci%C3%B3n" class="btn btn-gold magnetic">Escribime un email <span class="arr">→</span></a>
           <a href="https://www.instagram.com/santiagomatias.cian/" target="_blank" rel="noopener" class="btn btn-ghost magnetic">Escribime por Instagram</a>
