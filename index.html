@@ -334,15 +334,17 @@ body.ready .hero-bg img{transform:scale(1)}
 
 
 
-/* ---------- Waving corner flags ---------- */
-.wave-flag{position:absolute;z-index:3;top:clamp(56px,7vw,90px);right:clamp(-30px,-1vw,-10px);width:clamp(150px,17vw,250px);transform:rotate(-14deg);transform-origin:100% 0;filter:drop-shadow(0 18px 30px rgba(0,0,0,.55));pointer-events:none}
-.wave-flag svg{display:block;width:100%;height:auto;overflow:visible}
-.wave-flag::before{content:"";position:absolute;left:-6%;top:2%;width:6px;height:118%;border-radius:4px;background:linear-gradient(180deg,#f1dca4,#8a6d32);transform:rotate(0deg);box-shadow:0 6px 16px rgba(0,0,0,.5)}
-.wave-flag::after{content:"";position:absolute;left:calc(-6% - 4px);top:-2%;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff3d0,#c9a05a 60%,#7a5c22)}
-.stage-flag .wave-flag{opacity:clamp(0,calc((var(--p) - .45) * 3),1)}
+
+/* ---------- Flag stripes ---------- */
+.flagbar{height:9px;width:min(320px,70vw);border-radius:5px;margin-top:20px;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.flagbar.br{background:linear-gradient(90deg,#009C3B 0 40%,#FFDF00 40% 70%,#002776 70% 100%)}
+.flagbar.mx{background:linear-gradient(90deg,#006847 0 33.3%,#fff 33.3% 66.6%,#CE1126 66.6% 100%)}
+.edge{position:absolute;left:0;right:0;top:0;height:7px;z-index:3}
+.edge.br{background:linear-gradient(90deg,#009C3B 0 40%,#FFDF00 40% 70%,#002776 70% 100%)}
+.edge.mx{background:linear-gradient(90deg,#006847 0 33.3%,#fff 33.3% 66.6%,#CE1126 66.6% 100%)}
 .sp-band .hb-live{top:auto;bottom:22px}
-@media (max-width:640px){.wave-flag{width:120px;top:70px;right:-6px}}
-@media (prefers-reduced-motion:reduce){.wave-flag animate,.wave-flag animateTransform{display:none}}
+.sp-band::after{background:linear-gradient(180deg,rgba(34,33,39,.35) 0%,transparent 18%,transparent 50%,rgba(34,33,39,.92) 100%),linear-gradient(90deg,rgba(34,33,39,.7),transparent 60%)}
+.mx-band video{object-position:50% 40%}
 
 /* ---------- Marquee ---------- */
 .marquee{border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:22px 0;overflow:hidden;background:rgba(34,33,39,.4);backdrop-filter:blur(4px)}
@@ -675,25 +677,12 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 
   <!-- SAO PAULO -->
   <section class="sp-band" aria-label="Conferencia en Campinas, São Paulo">
-    <div class="wave-flag" aria-label="Bandera de Brasil" role="img">
-      <svg viewBox="-10 -10 320 220">
-        <defs>
-          <clipPath id="clip-br"><path d="M0,14 C60,0 120,28 180,14 S270,0 300,12 L300,188 C240,202 180,174 120,188 S30,202 0,186 Z"><animate attributeName="d" dur="2.6s" repeatCount="indefinite" values="M0,14 C60,0 120,28 180,14 S270,0 300,12 L300,188 C240,202 180,174 120,188 S30,202 0,186 Z;M0,12 C60,28 120,0 180,14 S270,28 300,14 L300,186 C240,172 180,200 120,186 S30,172 0,188 Z;M0,16 C70,6 130,22 190,10 S270,6 300,16 L300,190 C230,196 170,180 110,192 S40,196 0,184 Z;M0,14 C60,0 120,28 180,14 S270,0 300,12 L300,188 C240,202 180,174 120,188 S30,202 0,186 Z"/></path></clipPath>
-          <linearGradient id="shade-br" x1="0" x2="1" y1="0" y2="0" spreadMethod="repeat">
-            <stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset=".25" stop-color="#fff" stop-opacity=".22"/>
-            <stop offset=".5" stop-color="#000" stop-opacity=".28"/><stop offset=".75" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#000" stop-opacity=".28"/>
-          </linearGradient>
-        </defs>
-        <g clip-path="url(#clip-br)">
-          <rect width="300" height="200" fill="#009C3B"/><path d="M150 22 280 100 150 178 20 100z" fill="#FFDF00"/><circle cx="150" cy="100" r="46" fill="#002776"/><path d="M106 92c30-8 62-4 88 12" stroke="#fff" stroke-width="7" fill="none"/>
-          <rect x="-300" y="0" width="900" height="200" fill="url(#shade-br)"><animateTransform attributeName="transform" type="translate" from="0 0" to="300 0" dur="2.6s" repeatCount="indefinite"/></rect>
-        </g>
-      </svg>
-    </div>
+    <div class="edge br"></div>
     <video id="spVid" src="hero-reel.mp4" poster="hero-poster.jpg" muted loop playsinline preload="metadata"></video>
     <div class="sp-cap wrap">
       <div class="eyebrow reveal">Hito · Brasil</div>
       <div class="sp-big reveal r1"><b>4.000</b><span>personas</span></div>
+      <div class="flagbar br reveal r2"></div>
       <p class="reveal r2">Centro de Convenciones de <strong>Campinas, São Paulo</strong>. <em>El Poder de la Asociación.</em></p>
     </div>
     <span class="hb-live"><i></i>Conferencia en vivo</span>
@@ -763,34 +752,17 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 
 
   <!-- STAGE -->
-  <section class="stage" id="stage" aria-label="Conferencias">
-    <div class="stage-sticky">
-      <div class="stage-frame"><video id="stageVid" src="stage-reel.mp4" poster="stage-poster.jpg" muted loop playsinline preload="metadata" aria-label="Santiago Cian dando una conferencia"></video></div>
-      <div class="stage-flag"><div class="wave-flag" aria-label="Bandera de México" role="img">
-      <svg viewBox="-10 -10 320 220">
-        <defs>
-          <clipPath id="clip-mx"><path d="M0,14 C60,0 120,28 180,14 S270,0 300,12 L300,188 C240,202 180,174 120,188 S30,202 0,186 Z"><animate attributeName="d" dur="2.6s" repeatCount="indefinite" values="M0,14 C60,0 120,28 180,14 S270,0 300,12 L300,188 C240,202 180,174 120,188 S30,202 0,186 Z;M0,12 C60,28 120,0 180,14 S270,28 300,14 L300,186 C240,172 180,200 120,186 S30,172 0,188 Z;M0,16 C70,6 130,22 190,10 S270,6 300,16 L300,190 C230,196 170,180 110,192 S40,196 0,184 Z;M0,14 C60,0 120,28 180,14 S270,0 300,12 L300,188 C240,202 180,174 120,188 S30,202 0,186 Z"/></path></clipPath>
-          <linearGradient id="shade-mx" x1="0" x2="1" y1="0" y2="0" spreadMethod="repeat">
-            <stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset=".25" stop-color="#fff" stop-opacity=".22"/>
-            <stop offset=".5" stop-color="#000" stop-opacity=".28"/><stop offset=".75" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#000" stop-opacity=".28"/>
-          </linearGradient>
-        </defs>
-        <g clip-path="url(#clip-mx)">
-          <rect width="100" height="200" fill="#006847"/><rect x="100" width="100" height="200" fill="#fff"/><rect x="200" width="100" height="200" fill="#CE1126"/><ellipse cx="150" cy="100" rx="24" ry="22" fill="none" stroke="#8a6a2a" stroke-width="5"/><path d="M134 108c10 8 22 8 32 0" stroke="#4d7a34" stroke-width="5" fill="none"/>
-          <rect x="-300" y="0" width="900" height="200" fill="url(#shade-mx)"><animateTransform attributeName="transform" type="translate" from="0 0" to="300 0" dur="2.6s" repeatCount="indefinite"/></rect>
-        </g>
-      </svg>
-    </div></div>
-      <div class="stage-hint" aria-hidden="true">En escena</div>
-      <div class="cap wrap">
-        <div class="eyebrow">Hito · México</div>
-        <h2 class="h2">Cancún, <em>México</em>.</h2>
-        <p>Liderar a miles de personas también se hace arriba del escenario: claridad, energía y un mensaje que se lleva a la práctica.</p>
-        <div class="milestones">
-          <div class="ms"><b>3.000</b><span>personas · Centro de Convenciones<br>Cancún, México · <em>El Camino del Héroe</em></span></div>
-        </div>
-      </div>
+  <!-- CANCUN -->
+  <section class="sp-band mx-band" aria-label="Conferencia en Cancún, México">
+    <div class="edge mx"></div>
+    <video id="stageVid" src="stage-reel.mp4" poster="stage-poster.jpg" muted loop playsinline preload="metadata"></video>
+    <div class="sp-cap wrap">
+      <div class="eyebrow reveal">Hito · México</div>
+      <div class="sp-big reveal r1"><b>3.000</b><span>personas</span></div>
+      <div class="flagbar mx reveal r2"></div>
+      <p class="reveal r2">Centro de Convenciones de <strong>Cancún, México</strong>. <em>El Camino del Héroe.</em></p>
     </div>
+    <span class="hb-live"><i></i>Conferencia en vivo</span>
   </section>
 
   <!-- TIMELINE -->
@@ -1180,17 +1152,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   if (pl){ const v = pl.querySelector('video'), b = pl.querySelector('.play');
     b.addEventListener('click', () => { v.controls = true; pl.classList.add('on'); const p = v.play(); if (p && p.catch) p.catch(()=>{}); });
   }
-  /* ---------- Stage cinema zoom ---------- */
-  const stg = document.getElementById('stage');
-  if (stg && !reduce){
-    let tick = false;
-    const upd = () => { tick = false;
-      const r = stg.getBoundingClientRect(); const total = r.height - innerHeight;
-      const p = Math.min(1, Math.max(0, -r.top / (total * .7)));
-      stg.style.setProperty('--p', p.toFixed(3)); };
-    addEventListener('scroll', () => { if (!tick){ tick = true; requestAnimationFrame(upd); } }, {passive:true});
-    addEventListener('resize', upd); upd();
-  }
+
 
 
   /* ---------- Copy email ---------- */
@@ -1212,12 +1174,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 
 
   /* ---------- Play videos when visible ---------- */
-  ['spVid'].forEach(id => { const v = document.getElementById(id); if (v && 'IntersectionObserver' in window && !reduce){
+  ['spVid','stageVid'].forEach(id => { const v = document.getElementById(id); if (v && 'IntersectionObserver' in window && !reduce){
     new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ const p = v.play(); if (p && p.catch) p.catch(()=>{}); } else v.pause(); }), {threshold:.1}).observe(v); } });
-  const sv = document.getElementById('stageVid');
-  if (sv && 'IntersectionObserver' in window){
-    new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ const p = sv.play(); if (p && p.catch) p.catch(()=>{}); } else sv.pause(); }), {threshold:.05}).observe(sv);
-  }
+
 
   /* ---------- Nav + progress ---------- */
   const nav = document.getElementById('nav'), prog = document.querySelector('.progress');
