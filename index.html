@@ -191,6 +191,19 @@ body.ready .d1{transition-delay:.35s} body.ready .d2{transition-delay:.5s} body.
 .ms b{font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.8vw,40px);line-height:1;color:var(--gold2)}
 .ms span{font-size:12.5px;color:#ddd9d0;line-height:1.35}
 @media (max-width:640px){.ms{padding:12px 16px;flex:1 1 100%}}
+/* ---------- Planner ---------- */
+.planner{padding:clamp(60px,9vw,130px) 0}
+.planner-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(36px,6vw,90px);align-items:center}
+.planner .lead{margin-top:24px}
+.planner p:not(.lead){color:#dcd8cf;font-size:clamp(16px,1.35vw,18px);line-height:1.7;margin-top:18px}
+.pl-list{list-style:none;margin-top:24px;display:grid;gap:12px}
+.pl-list li{position:relative;padding-left:30px;color:#ece8e0;font-size:15.5px}
+.pl-list li::before{content:"";position:absolute;left:0;top:.5em;width:14px;height:8px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg) translateY(-3px)}
+.pl-inc{margin-top:22px;display:inline-flex;gap:10px;align-items:center;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(212,179,106,.06);font-size:13.5px;color:#ece8e0}
+.pl-inc span{color:var(--gold);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+.player.yt img{width:100%;height:100%;object-fit:cover;display:block}
+.player.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (max-width:1024px){.planner-grid{grid-template-columns:1fr}}
 /* ---------- Gallery panels ---------- */
 .gallery{padding:clamp(50px,8vw,110px) 0 0}
 .gal-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
@@ -486,10 +499,10 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 <header class="nav" id="nav">
   <a href="#top" class="brand" aria-label="Santiago Cian, inicio"><span class="mono">SC</span><span>Santiago Cian</span></a>
   <ul>
-    <li><a href="#cifras">Cifras</a></li>
     <li><a href="#historia">Historia</a></li>
     <li><a href="#contenido">Contenido</a></li>
     <li><a href="#libro">Libro</a></li>
+    <li><a href="#planificador">Planificador</a></li>
     <li><a href="#empresas">Empresas</a></li>
     <li><a href="#marcas">Marcas</a></li>
   </ul>
@@ -502,6 +515,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   <a href="#historia">Mi <em>historia</em></a>
   <a href="#contenido">Contenido</a>
   <a href="#libro">Mi <em>libro</em></a>
+  <a href="#planificador">Planificador</a>
   <a href="#empresas">Para <em>empresas</em></a>
   <a href="#aporte">Qué aporto</a>
   <a href="#marcas">Para <em>marcas</em></a>
@@ -698,6 +712,32 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         <p class="reveal r3">Presentado en la <strong style="color:var(--ink)">Feria Internacional del Libro de Buenos Aires</strong>, la más grande del mundo de habla hispana.</p>
         <p class="reveal r3">No promete atajos. Ofrece herramientas para cambiar la mentalidad y construir una vida más estable y exitosa.</p>
         <div class="book-tags reveal r4"><span>Hábitos</span><span>Mentalidad</span><span>De empleado a emprendedor</span><span>Autor: Santiago Matías Cian</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANNER -->
+  <section class="planner" id="planificador">
+    <div class="wrap planner-grid">
+      <div>
+        <div class="eyebrow reveal">Ebook · Desarrollo personal</div>
+        <h2 class="h2 reveal r1" style="margin-top:20px">Planificador<br>de <em>Metas</em>.</h2>
+        <p class="lead reveal r2">Convertí tus ideas en resultados <em>en 12 semanas</em>.</p>
+        <p class="reveal r2">Un método simple para enfocarte en un solo objetivo, planificar tu semana y sostener la motivación hasta alcanzarlo.</p>
+        <ul class="pl-list reveal r3">
+          <li>Una meta a la vez, con foco total</li>
+          <li>Planificación semanal paso a paso</li>
+          <li>Registro de sueños y emociones</li>
+          <li>Afirmaciones propias para mantener la motivación</li>
+        </ul>
+        <div class="pl-inc reveal r3"><span>Incluye</span> PDF descargable + video guía</div>
+        <div class="hero-cta reveal r4" style="margin-top:30px">
+          <a href="https://hotmart.com/es/marketplace/productos/hagsxd-planificador-de-metas-31sic/M101881724A?sck=HOTMART_PRODUCT_PAGE" target="_blank" rel="noopener" class="btn btn-gold magnetic">Conseguir el planificador <span class="arr">→</span></a>
+        </div>
+      </div>
+      <div class="player yt reveal r2" id="ytPlayer" data-id="tPhPxXbRPYE">
+        <img src="https://i.ytimg.com/vi/tPhPxXbRPYE/hqdefault.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+        <button class="play" aria-label="Reproducir video del Planificador de Metas"><span><svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></span><em>Cómo funciona el planificador</em></button>
       </div>
     </div>
   </section>
@@ -983,6 +1023,16 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     const done = () => { b.textContent = '¡Copiado!'; setTimeout(() => b.textContent = 'Copiar', 1800); };
     try { navigator.clipboard.writeText(t).then(done, done); } catch(e){ done(); }
   }));
+
+
+  /* ---------- YouTube facade ---------- */
+  const yt = document.getElementById('ytPlayer');
+  if (yt){ yt.querySelector('.play').addEventListener('click', () => {
+    const f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + yt.dataset.id + '?autoplay=1&rel=0';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true; f.title = 'Planificador de Metas';
+    yt.appendChild(f); yt.classList.add('on');
+  }); }
 
   /* ---------- Nav + progress ---------- */
   const nav = document.getElementById('nav'), prog = document.querySelector('.progress');
