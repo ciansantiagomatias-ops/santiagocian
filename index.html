@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Santiago Cian — Orador, desarrollo personal y soluciones empresariales</title>
-<meta name="description" content="Santiago Cian: orador, divulgador de desarrollo personal y consultor en soluciones empresariales. Conferencias en más de 10 países, liderazgo de una red de +50.000 personas y podcast en español desde 2021.">
+<meta name="description" content="Santiago Cian: orador, divulgador de desarrollo personal y consultor en soluciones empresariales. Autor del libro Quiero Plata. Conferencias en más de 10 países, liderazgo de una red de +50.000 personas y podcast en español desde 2021.">
 <meta property="og:title" content="Santiago Cian — 1M de personas aprendiendo conmigo">
 <meta property="og:description" content="Comunicación, liderazgo y contenido con impacto. Podcast de desarrollo personal en español desde 2021.">
 <meta property="og:type" content="website">
@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://santiagocian.netlify.app/">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="hJyCateV6eu7bSDrq_Bmm-ln-VPBV1acanhah8L2B4c" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Santiago Cian","alternateName":"Santiago Matías Cian","url":"https://santiagocian.netlify.app/","image":"https://santiagocian.netlify.app/portrait.jpg","jobTitle":"Orador, divulgador de desarrollo personal y consultor en soluciones empresariales","nationality":"Argentina","description":"Conferencias de oratoria y liderazgo, desarrollo personal y soluciones para empresas. Podcast en español desde 2021.","sameAs":["https://www.instagram.com/santiagomatias.cian/","https://www.youtube.com/@Caminoalexitosantiagocian","https://open.spotify.com/show/6mPNfKTgjI6JD6gz3cvig2"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Santiago Cian","alternateName":"Santiago Matías Cian","url":"https://santiagocian.netlify.app/","image":"https://santiagocian.netlify.app/portrait.jpg","jobTitle":"Orador, divulgador de desarrollo personal y consultor en soluciones empresariales","nationality":"Argentina","description":"Conferencias de oratoria y liderazgo, desarrollo personal y soluciones para empresas. Podcast en español desde 2021. Autor del libro Quiero Plata.","sameAs":["https://www.instagram.com/santiagomatias.cian/","https://www.youtube.com/@Caminoalexitosantiagocian","https://open.spotify.com/show/6mPNfKTgjI6JD6gz3cvig2"]}</script>
 <meta name="theme-color" content="#17161a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -201,6 +201,21 @@ body.ready .d1{transition-delay:.35s} body.ready .d2{transition-delay:.5s} body.
 .player.on .play{opacity:0;pointer-events:none}
 
 
+/* ---------- Book ---------- */
+.book{padding:clamp(60px,9vw,130px) 0}
+.book-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,110px);align-items:center}
+.book-3d{perspective:1400px;display:grid;place-items:center;padding:30px 0}
+.book-3d .cover{position:relative;width:min(340px,70vw);aspect-ratio:700/980;transform:rotateY(-22deg) rotateX(4deg);transform-style:preserve-3d;transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.book-3d:hover .cover{transform:rotateY(-8deg) rotateX(2deg)}
+.book-3d .cover img{position:absolute;inset:0;width:100%;height:100%;border-radius:3px 8px 8px 3px;box-shadow:30px 40px 80px -20px rgba(0,0,0,.9),0 0 90px -20px rgba(212,179,106,.35)}
+.book-3d .cover::before{content:"";position:absolute;top:1.5%;bottom:1.5%;right:-22px;width:24px;transform:rotateY(90deg);transform-origin:left;background:repeating-linear-gradient(180deg,#eee 0 2px,#d9d6cf 2px 3px);border-radius:0 3px 3px 0}
+.book-3d .cover::after{content:"";position:absolute;inset:0;border-radius:3px 8px 8px 3px;background:linear-gradient(90deg,rgba(0,0,0,.35) 0,rgba(255,255,255,.12) 2.5%,transparent 6%,transparent 70%,rgba(255,255,255,.08));pointer-events:none}
+.book-3d .glow{position:absolute;width:70%;height:30px;bottom:0;background:radial-gradient(ellipse,rgba(212,179,106,.35),transparent 70%);filter:blur(10px)}
+.book .lead{margin-top:26px}
+.book-body p{color:#dcd8cf;font-size:clamp(16px,1.35vw,18px);line-height:1.75;margin-top:22px}
+.book-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.book-tags span{padding:9px 16px;border-radius:999px;border:1px solid var(--line);font-size:13px;color:var(--gold2);background:rgba(212,179,106,.05)}
+
 /* ---------- Marquee ---------- */
 .marquee{border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:22px 0;overflow:hidden;background:rgba(23,22,26,.4);backdrop-filter:blur(4px)}
 .marquee-track{display:flex;gap:56px;width:max-content;animation:marq 38s linear infinite}
@@ -348,7 +363,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 @media (max-width:1024px){
   .hero .wrap{grid-template-columns:1fr}
   .hero-fig{justify-self:center;max-width:380px;margin-top:40px}
-  .watch-grid{grid-template-columns:1fr}
+  .watch-grid,.book-grid{grid-template-columns:1fr}
   .biz-head{grid-template-columns:1fr}
   .biz-list{grid-template-columns:1fr}
   .stat-grid{grid-template-columns:repeat(2,1fr)}
@@ -377,6 +392,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   .hero-fig .seal-core{font-size:24px}
   .hero-fig .chip.c1{right:-12px}
   .hero-fig .chip.c2{left:-12px}
+  .book-grid .book-3d{order:-1}
   .hero-fig .chip{font-size:11px;padding:8px 11px}.hero-fig .chip b{font-size:13px}
   .emblem .chip{font-size:11px;padding:8px 11px}
   .emblem .chip b{font-size:13px}
@@ -421,8 +437,8 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     <li><a href="#cifras">Cifras</a></li>
     <li><a href="#historia">Historia</a></li>
     <li><a href="#contenido">Contenido</a></li>
+    <li><a href="#libro">Libro</a></li>
     <li><a href="#empresas">Empresas</a></li>
-    <li><a href="#aporte">Qué aporto</a></li>
     <li><a href="#marcas">Marcas</a></li>
   </ul>
   <a href="#contacto" class="btn btn-gold magnetic">Colaborar <span class="arr">→</span></a>
@@ -433,6 +449,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   <a href="#cifras">Cifras</a>
   <a href="#historia">Mi <em>historia</em></a>
   <a href="#contenido">Contenido</a>
+  <a href="#libro">Mi <em>libro</em></a>
   <a href="#empresas">Para <em>empresas</em></a>
   <a href="#aporte">Qué aporto</a>
   <a href="#marcas">Para <em>marcas</em></a>
@@ -451,7 +468,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
           <span class="line"><span><em>Cian</em></span></span>
         </h1>
         <div class="roles fade-up d1">
-          <span>Orador</span><span>Desarrollo personal</span><span>Soluciones empresariales</span>
+          <span>Orador</span><span>Desarrollo personal</span><span>Soluciones empresariales</span><span>Escritor</span>
         </div>
         <div class="hero-claim fade-up d2">
           <div class="big gold-text"><span class="count" data-to="1" data-suffix="M">0</span></div>
@@ -616,6 +633,24 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     </div>
   </section>
 
+  <!-- BOOK -->
+  <section class="book" id="libro">
+    <div class="wrap book-grid">
+      <div class="book-3d reveal">
+        <div class="cover"><img src="book.jpg" alt="Tapa del libro Quiero Plata, de Santiago Matías Cian" width="700" height="980" loading="lazy"></div>
+        <div class="glow"></div>
+      </div>
+      <div class="book-body">
+        <div class="eyebrow reveal">Escritor</div>
+        <h2 class="h2 reveal r1" style="margin-top:20px">Quiero <em>Plata</em>.</h2>
+        <p class="lead reveal r2">Una guía sencilla para tomar el control de tu vida económica, <em>sin fórmulas mágicas</em>.</p>
+        <p class="reveal r3">Con lenguaje claro y ejemplos prácticos, el libro recorre lo que no te enseñaron en la escuela: crear hábitos financieros, entender la importancia de invertir y dar el paso de empleado a emprendedor.</p>
+        <p class="reveal r3">No promete atajos. Ofrece herramientas para cambiar la mentalidad y construir una vida más estable y exitosa.</p>
+        <div class="book-tags reveal r4"><span>Hábitos</span><span>Mentalidad</span><span>De empleado a emprendedor</span><span>Autor: Santiago Matías Cian</span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- VALUE -->
   <section class="value" id="aporte">
     <div class="wrap">
@@ -724,7 +759,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 <footer>
   <div class="wrap">
     <span>© <span id="yr">2026</span> Santiago Cian · Argentina</span>
-    <span>Oratoria · Desarrollo personal · Soluciones empresariales</span>
+    <span>Oratoria · Desarrollo personal · Soluciones empresariales · Escritor</span>
   </div>
 </footer>
 
