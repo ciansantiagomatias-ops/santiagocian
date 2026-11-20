@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Santiago Cian — Emprendedor, inversor, divulgador y escritor</title>
-<meta name="description" content="Santiago Cian (Santiago Matías Cian): emprendedor, inversor, divulgador de desarrollo personal y escritor argentino. Podcast en español desde 2021, más de 1M de visualizaciones. Colaboraciones con marcas.">
+<title>Santiago Cian — Orador, desarrollo personal y soluciones empresariales</title>
+<meta name="description" content="Santiago Cian: orador, divulgador de desarrollo personal y consultor en soluciones empresariales. Conferencias en más de 10 países, liderazgo de una red de +50.000 personas y podcast en español desde 2021.">
 <meta property="og:title" content="Santiago Cian — 1M de personas aprendiendo conmigo">
 <meta property="og:description" content="Comunicación, liderazgo y contenido con impacto. Podcast de desarrollo personal en español desde 2021.">
 <meta property="og:type" content="website">
@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://santiagocian.netlify.app/">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="hJyCateV6eu7bSDrq_Bmm-ln-VPBV1acanhah8L2B4c" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Santiago Cian","alternateName":"Santiago Matías Cian","url":"https://santiagocian.netlify.app/","image":"https://santiagocian.netlify.app/portrait.jpg","jobTitle":"Emprendedor, inversor, divulgador de desarrollo personal y escritor","nationality":"Argentina","description":"Podcast de desarrollo personal en español desde 2021. Autor del libro Quiero Plata.","sameAs":["https://www.instagram.com/santiagomatias.cian/","https://www.youtube.com/@Caminoalexitosantiagocian","https://open.spotify.com/show/6mPNfKTgjI6JD6gz3cvig2"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Santiago Cian","alternateName":"Santiago Matías Cian","url":"https://santiagocian.netlify.app/","image":"https://santiagocian.netlify.app/portrait.jpg","jobTitle":"Orador, divulgador de desarrollo personal y consultor en soluciones empresariales","nationality":"Argentina","description":"Conferencias de oratoria y liderazgo, desarrollo personal y soluciones para empresas. Podcast en español desde 2021.","sameAs":["https://www.instagram.com/santiagomatias.cian/","https://www.youtube.com/@Caminoalexitosantiagocian","https://open.spotify.com/show/6mPNfKTgjI6JD6gz3cvig2"]}</script>
 <meta name="theme-color" content="#17161a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,7 +116,6 @@ section{position:relative}
 body.ready .hero h1 .line span{transform:none}
 .roles{display:flex;flex-wrap:wrap;gap:10px 22px;color:var(--muted);font-size:clamp(14px,1.4vw,16px);letter-spacing:.02em}
 .roles span{display:inline-flex;align-items:center;gap:22px}
-.roles .r-book{gap:0}.roles .r-book i{color:var(--gold2)}
 .roles span:not(:last-child)::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--gold3)}
 .hero-claim{margin-top:44px;display:flex;align-items:flex-end;gap:22px;flex-wrap:wrap}
 .hero-claim .big{font-family:var(--serif);font-size:clamp(56px,7vw,96px);line-height:.9;letter-spacing:-.02em}
@@ -201,20 +200,6 @@ body.ready .d1{transition-delay:.35s} body.ready .d2{transition-delay:.5s} body.
 .player .play em{position:absolute;left:24px;bottom:20px;font-style:normal;font-size:13px;color:#e8e3d8;letter-spacing:.04em}
 .player.on .play{opacity:0;pointer-events:none}
 
-/* ---------- Book ---------- */
-.book{padding:clamp(60px,9vw,130px) 0}
-.book-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,110px);align-items:center}
-.book-3d{perspective:1400px;display:grid;place-items:center;padding:30px 0}
-.book-3d .cover{position:relative;width:min(340px,70vw);aspect-ratio:700/980;transform:rotateY(-22deg) rotateX(4deg);transform-style:preserve-3d;transition:transform 1s cubic-bezier(.16,1,.3,1)}
-.book-3d:hover .cover{transform:rotateY(-8deg) rotateX(2deg)}
-.book-3d .cover img{position:absolute;inset:0;width:100%;height:100%;border-radius:3px 8px 8px 3px;box-shadow:30px 40px 80px -20px rgba(0,0,0,.9),0 0 90px -20px rgba(212,179,106,.35)}
-.book-3d .cover::before{content:"";position:absolute;top:1.5%;bottom:1.5%;right:-22px;width:24px;transform:rotateY(90deg);transform-origin:left;background:repeating-linear-gradient(180deg,#eee 0 2px,#d9d6cf 2px 3px);border-radius:0 3px 3px 0}
-.book-3d .cover::after{content:"";position:absolute;inset:0;border-radius:3px 8px 8px 3px;background:linear-gradient(90deg,rgba(0,0,0,.35) 0,rgba(255,255,255,.12) 2.5%,transparent 6%,transparent 70%,rgba(255,255,255,.08));pointer-events:none}
-.book-3d .glow{position:absolute;width:70%;height:30px;bottom:0;background:radial-gradient(ellipse,rgba(212,179,106,.35),transparent 70%);filter:blur(10px)}
-.book .lead{margin-top:26px}
-.book-body p{color:#dcd8cf;font-size:clamp(16px,1.35vw,18px);line-height:1.75;margin-top:22px}
-.book-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-.book-tags span{padding:9px 16px;border-radius:999px;border:1px solid var(--line);font-size:13px;color:var(--gold2);background:rgba(212,179,106,.05)}
 
 /* ---------- Marquee ---------- */
 .marquee{border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:22px 0;overflow:hidden;background:rgba(23,22,26,.4);backdrop-filter:blur(4px)}
@@ -322,10 +307,20 @@ body.ready .d1{transition-delay:.35s} body.ready .d2{transition-delay:.5s} body.
 .light .eyebrow{color:#8f6f2f}.light .eyebrow::before{background:linear-gradient(90deg,transparent,#8f6f2f)}
 .light .h2,.light .lead{color:#1d1b17}
 .light .h2 em,.light .lead em{background:linear-gradient(120deg,#b08a3e,#8a6a2a);-webkit-background-clip:text;background-clip:text;color:transparent}
-.light .book-body p:not(.lead){color:#4d483f}
-.light .book-tags span{color:#6e5523;border-color:rgba(143,111,47,.35);background:rgba(143,111,47,.07)}
-.light .book-3d .cover img{box-shadow:30px 40px 70px -25px rgba(60,40,10,.55)}
-.light .book-3d .glow{background:radial-gradient(ellipse,rgba(120,90,40,.3),transparent 70%)}
+
+
+/* ---------- Business (light) ---------- */
+.biz{padding:clamp(70px,10vw,140px) 0}
+.biz-head{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;margin-bottom:56px}
+.biz-head p{color:#4d483f;font-size:16px;max-width:440px;justify-self:end}
+.biz-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.biz-item{display:flex;gap:22px;padding:30px;border-radius:22px;background:rgba(255,255,255,.65);border:1px solid rgba(143,111,47,.18);box-shadow:0 20px 50px -35px rgba(60,40,10,.4);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.biz-item:hover{transform:translateY(-4px);box-shadow:0 30px 60px -30px rgba(60,40,10,.45)}
+.biz-item .n{flex:none;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(143,111,47,.4);font-family:var(--serif);font-style:italic;color:#8f6f2f;font-size:19px}
+.biz-item h3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,30px);line-height:1.1;color:#1d1b17;margin-bottom:8px}
+.biz-item p{color:#57524a;font-size:15px;line-height:1.6}
+.btn-dark{background:#1d1b17;color:#f5f2ec;border-color:#1d1b17}
+.btn-dark:hover{background:#2c2924}
 
 /* ---------- CTA with photo ---------- */
 .cta-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,6vw,90px);align-items:center;text-align:left}
@@ -353,7 +348,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 @media (max-width:1024px){
   .hero .wrap{grid-template-columns:1fr}
   .hero-fig{justify-self:center;max-width:380px;margin-top:40px}
-  .watch-grid,.book-grid{grid-template-columns:1fr}
+  .watch-grid{grid-template-columns:1fr}
+  .biz-head{grid-template-columns:1fr}
+  .biz-list{grid-template-columns:1fr}
   .stat-grid{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line2)}
@@ -381,7 +378,6 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   .hero-fig .chip.c1{right:-12px}
   .hero-fig .chip.c2{left:-12px}
   .hero-fig .chip{font-size:11px;padding:8px 11px}.hero-fig .chip b{font-size:13px}
-  .book-grid .book-3d{order:-1}
   .emblem .chip{font-size:11px;padding:8px 11px}
   .emblem .chip b{font-size:13px}
   .emblem .chip.c1{left:-4%}
@@ -425,7 +421,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     <li><a href="#cifras">Cifras</a></li>
     <li><a href="#historia">Historia</a></li>
     <li><a href="#contenido">Contenido</a></li>
-    <li><a href="#libro">Libro</a></li>
+    <li><a href="#empresas">Empresas</a></li>
     <li><a href="#aporte">Qué aporto</a></li>
     <li><a href="#marcas">Marcas</a></li>
   </ul>
@@ -437,7 +433,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   <a href="#cifras">Cifras</a>
   <a href="#historia">Mi <em>historia</em></a>
   <a href="#contenido">Contenido</a>
-  <a href="#libro">Mi <em>libro</em></a>
+  <a href="#empresas">Para <em>empresas</em></a>
   <a href="#aporte">Qué aporto</a>
   <a href="#marcas">Para <em>marcas</em></a>
   <a href="#contacto"><em>Hablemos →</em></a>
@@ -455,7 +451,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
           <span class="line"><span><em>Cian</em></span></span>
         </h1>
         <div class="roles fade-up d1">
-          <span>Emprendedor</span><span>Inversor</span><span>Divulgador de desarrollo personal</span><span class="r-book">Escritor de&nbsp;<i>Quiero Plata</i></span>
+          <span>Orador</span><span>Desarrollo personal</span><span>Soluciones empresariales</span>
         </div>
         <div class="hero-claim fade-up d2">
           <div class="big gold-text"><span class="count" data-to="1" data-suffix="M">0</span></div>
@@ -598,7 +594,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
           <div class="node">IV</div>
           <div class="when">2021 — hoy</div>
           <h3>Podcast, YouTube y proyectos propios</h3>
-          <p>Contenido de desarrollo personal en español con más de 1M de visualizaciones, el libro <em>Quiero Plata</em>, emprendimientos e inversiones.</p>
+          <p>Contenido de desarrollo personal en español con más de 1M de visualizaciones, conferencias y soluciones para empresas.</p>
         </div>
       </div>
     </div>
@@ -634,8 +630,8 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         <article class="card reveal">
           <div class="card-in">
             <div class="idx"><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H8l-4 4V5Z" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke-linecap="round"/></svg></span><span>01</span></div>
-            <h3>Comunicación clara y efectiva</h3>
-            <p>Mensajes que se entienden, se recuerdan y mueven a la acción. Frente a una persona, un equipo o un auditorio en otro país.</p>
+            <h3>Oratoria y comunicación efectiva</h3>
+            <p>Hablar en público con claridad y seguridad. Mensajes que se entienden, se recuerdan y mueven a la acción, frente a un equipo o un auditorio en otro país.</p>
           </div>
         </article>
         <article class="card reveal r1">
@@ -663,20 +659,23 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
     </div>
   </section>
 
-  <!-- BOOK -->
-  <section class="book light" id="libro">
-    <div class="wrap book-grid">
-      <div class="book-3d reveal">
-        <div class="cover"><img src="book.jpg" alt="Tapa del libro Quiero Plata, de Santiago Matías Cian" width="700" height="980" loading="lazy"></div>
-        <div class="glow"></div>
+  <!-- BUSINESS -->
+  <section class="biz light" id="empresas">
+    <div class="wrap">
+      <div class="biz-head">
+        <div>
+          <div class="eyebrow reveal">Soluciones empresariales</div>
+          <h2 class="h2 reveal r1" style="margin-top:20px">Equipos que comunican mejor, <em>rinden mejor</em>.</h2>
+        </div>
+        <p class="reveal r2">Llevo a las empresas lo que aprendí liderando a más de 50.000 personas: oratoria, liderazgo y orden para crecer. Formatos a medida para cada equipo.</p>
       </div>
-      <div class="book-body">
-        <div class="eyebrow reveal">Escritor</div>
-        <h2 class="h2 reveal r1" style="margin-top:20px">Quiero <em>Plata</em>.</h2>
-        <p class="lead reveal r2">Educación financiera, <em>sencilla y al pie</em>.</p>
-        <p class="reveal r3">Mi libro lleva al papel lo que comparto en el podcast: conceptos de dinero e inversión explicados sin vueltas, para que cualquiera pueda empezar a ordenar sus finanzas y tomar mejores decisiones.</p>
-        <div class="book-tags reveal r4"><span>Educación financiera</span><span>Inversión</span><span>Autor: Santiago Matías Cian</span></div>
+      <div class="biz-list">
+        <div class="biz-item reveal"><span class="n">I</span><div><h3>Conferencias y keynotes</h3><p>Charlas de oratoria, liderazgo y desarrollo personal para eventos, convenciones y cierres de año.</p></div></div>
+        <div class="biz-item reveal r1"><span class="n">II</span><div><h3>Talleres de oratoria</h3><p>Entrenamiento práctico para hablar en público, presentar ideas y comunicar con seguridad.</p></div></div>
+        <div class="biz-item reveal r2"><span class="n">III</span><div><h3>Desarrollo de líderes</h3><p>Formación de mandos y equipos: cómo liderar con claridad, delegar y sostener la motivación.</p></div></div>
+        <div class="biz-item reveal r3"><span class="n">IV</span><div><h3>Orden y enfoque para crecer</h3><p>Acompañamiento a proyectos en crecimiento para definir prioridades, procesos simples y foco.</p></div></div>
       </div>
+      <div class="reveal r2" style="margin-top:44px"><a href="#contacto" class="btn btn-dark magnetic">Llevarlo a mi empresa <span class="arr">→</span></a></div>
     </div>
   </section>
 
@@ -692,7 +691,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
           <div class="why reveal r3"><div class="k">03 · Constancia</div><h4>Contenido activo desde 2021</h4><p>Publicación sostenida en podcast y YouTube, con canal monetizado y una relación de confianza construida en el tiempo.</p></div>
         </div>
         <div class="formats reveal r2">
-          <span>Integraciones en el podcast</span><span>Contenido en YouTube</span><span>Colaboraciones en Instagram</span><span>Conferencias y charlas</span><span>Talleres para equipos</span><span>Presentaciones del libro</span><span>Proyectos a medida</span>
+          <span>Integraciones en el podcast</span><span>Contenido en YouTube</span><span>Colaboraciones en Instagram</span><span>Conferencias y charlas</span><span>Talleres de oratoria</span><span>Capacitaciones para empresas</span><span>Proyectos a medida</span>
         </div>
       </div>
     </div>
@@ -725,7 +724,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 <footer>
   <div class="wrap">
     <span>© <span id="yr">2026</span> Santiago Cian · Argentina</span>
-    <span>Emprendedor · Inversor · Divulgador · Escritor</span>
+    <span>Oratoria · Desarrollo personal · Soluciones empresariales</span>
   </div>
 </footer>
 
