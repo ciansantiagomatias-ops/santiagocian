@@ -332,6 +332,17 @@ body.ready .hero-bg img{transform:scale(1)}
 .story.light .mini{background:rgba(255,255,255,.7);border-color:rgba(143,111,47,.2);box-shadow:0 20px 40px -30px rgba(60,40,10,.4)}
 .story.light .mini b{color:#1d1b17}.story.light .mini > span{color:#6b665d}
 
+
+/* ---------- Flags ---------- */
+.eyebrow .flag{width:26px;height:18px;border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.4);flex:none}
+.eyebrow:has(.flag)::before{display:none}
+.flagbar{height:5px;width:min(260px,60vw);border-radius:3px;margin-top:18px;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.flagbar.br{background:linear-gradient(90deg,#009C3B 0 40%,#FFDF00 40% 70%,#002776 70% 100%)}
+.flagbar.mx{background:linear-gradient(90deg,#006847 0 33.3%,#fff 33.3% 66.6%,#CE1126 66.6% 100%)}
+.edge{position:absolute;left:0;right:0;top:0;height:4px;z-index:3}
+.edge.br{background:linear-gradient(90deg,#009C3B 0 40%,#FFDF00 40% 70%,#002776 70% 100%)}
+.edge.mx{background:linear-gradient(90deg,#006847 0 33.3%,#fff 33.3% 66.6%,#CE1126 66.6% 100%);opacity:var(--p);top:0}
+
 /* ---------- Marquee ---------- */
 .marquee{border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:22px 0;overflow:hidden;background:rgba(34,33,39,.4);backdrop-filter:blur(4px)}
 .marquee-track{display:flex;gap:56px;width:max-content;animation:marq 38s linear infinite}
@@ -663,10 +674,12 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 
   <!-- SAO PAULO -->
   <section class="sp-band" aria-label="Conferencia en Campinas, São Paulo">
+    <div class="edge br"></div>
     <video id="spVid" src="hero-reel.mp4" poster="hero-poster.jpg" muted loop playsinline preload="metadata"></video>
     <div class="sp-cap wrap">
-      <div class="eyebrow reveal">Hito · Brasil</div>
+      <div class="eyebrow reveal"><svg class="flag" viewBox="0 0 30 21" aria-label="Bandera de Brasil"><rect width="30" height="21" rx="2" fill="#009C3B"/><path d="M15 2.6 27.4 10.5 15 18.4 2.6 10.5z" fill="#FFDF00"/><circle cx="15" cy="10.5" r="4.6" fill="#002776"/><path d="M10.6 9.6c3-.7 6.2-.3 8.8 1.2" stroke="#fff" stroke-width=".8" fill="none"/></svg> Hito · Brasil</div>
       <div class="sp-big reveal r1"><b>4.000</b><span>personas</span></div>
+      <div class="flagbar br reveal r2"></div>
       <p class="reveal r2">Centro de Convenciones de <strong>Campinas, São Paulo</strong>. <em>El Poder de la Asociación.</em></p>
     </div>
     <span class="hb-live"><i></i>Conferencia en vivo</span>
@@ -738,11 +751,13 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
   <!-- STAGE -->
   <section class="stage" id="stage" aria-label="Conferencias">
     <div class="stage-sticky">
+      <div class="edge mx"></div>
       <div class="stage-frame"><video id="stageVid" src="stage-reel.mp4" poster="stage-poster.jpg" muted loop playsinline preload="metadata" aria-label="Santiago Cian dando una conferencia"></video></div>
       <div class="stage-hint" aria-hidden="true">En escena</div>
       <div class="cap wrap">
-        <div class="eyebrow">Hito · En escena</div>
+        <div class="eyebrow"><svg class="flag" viewBox="0 0 30 21" aria-label="Bandera de México"><rect width="30" height="21" rx="2" fill="#fff"/><path d="M2 0h8v21H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#006847"/><path d="M20 0h8a2 2 0 0 1 2 2v17a2 2 0 0 1-2 2h-8z" fill="#CE1126"/><circle cx="15" cy="10.5" r="2.6" fill="#8a6a2a"/></svg> Hito · México</div>
         <h2 class="h2">Cancún, <em>México</em>.</h2>
+        <div class="flagbar mx"></div>
         <p>Liderar a miles de personas también se hace arriba del escenario: claridad, energía y un mensaje que se lleva a la práctica.</p>
         <div class="milestones">
           <div class="ms"><b>3.000</b><span>personas · Centro de Convenciones<br>Cancún, México · <em>El Camino del Héroe</em></span></div>
